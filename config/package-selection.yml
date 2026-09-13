@@ -1,0 +1,41 @@
+policy: workshop-selection-not-approval-list
+
+reference_data:
+  - pharmaverseraw
+  - pharmaversesdtm
+  - pharmaverseadam
+
+live_teaching:
+  - sdtm.oak
+  - admiral
+  - admiralonco
+  - metacore
+  - metatools
+  - rtables
+  - tern
+  - rlistings
+  - ggplot2
+  - survival
+
+engineering:
+  - renv
+  - targets
+  - yaml
+  - digest
+  - testthat
+
+optional_after_workshop:
+  - xportr
+  - sdtmchecks
+  - diffdf
+
+excluded:
+  - cards
+  - cardx
+  - tfrmt
+  - PK-specific packages
+
+selection_notes:
+  - ARS/ARD is intentionally out of scope for this course.
+  - Official examples, not this file, define package APIs.
+  - Actual versions are frozen in renv.lock after the enterprise mirror is approved.

@@ -1,0 +1,13 @@
+patient_id,assessment_id,assessment_date,visit,assessment_code,assessment_label
+101,RS-101-1,2025-02-02,WEEK 4,PR,Partial Response
+101,RS-101-2,2025-03-02,WEEK 8,PR,Partial Response
+102,RS-102-1,2025-02-04,WEEK 4,SD,Stable Disease
+102,RS-102-2,2025-03-04,WEEK 8,SD,Stable Disease
+103,RS-103-1,2025-02-09,WEEK 4,PD,Progressive Disease
+104,RS-104-1,2025-02-12,WEEK 4,CR,Complete Response
+104,RS-104-2,2025-03-12,WEEK 8,CR,Complete Response
+105,RS-105-1,2025-02-03,WEEK 4,PD,Progressive Disease
+106,RS-106-1,2025-02-06,WEEK 4,PR,Partial Response
+106,RS-106-2,2025-03-06,WEEK 8,PR,Partial Response
+107,RS-107-1,2025-02-11,WEEK 4,SD,Stable Disease
+108,RS-108-1,2025-02-15,WEEK 4,PD,Progressive Disease

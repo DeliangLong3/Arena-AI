@@ -1,0 +1,31 @@
+contract_version: '1.0'
+outputs:
+  - id: T_DEMOG
+    type: table
+    input: ADSL
+    purpose: treatment_and_baseline
+  - id: T_TEAE
+    type: table
+    input: ADAE
+    purpose: treatment_emergent_adverse_events
+  - id: T_BOR
+    type: table
+    input: ADRS
+    purpose: best_overall_response
+  - id: T_PFS
+    type: table
+    input: ADTTE
+    purpose: progression_free_survival_summary
+  - id: L_AE
+    type: listing
+    input: ADAE
+    purpose: subject_level_adverse_event_listing
+  - id: F_PFS_KM
+    type: figure
+    input: ADTTE
+    purpose: progression_free_survival_curve
+
+acceptance:
+  required_metadata: [output_id, input, population, treatment, statistic, reviewer]
+  no_hidden_statistical_recalculation: false
+  note: Direct ADaM-to-TFL is intentionally selected; this is not ARS/ARD.

@@ -1,0 +1,38 @@
+contract_version: '1.0'
+study_id: WS-ONCO-001
+source_system: synthetic-vendor-edc
+
+files:
+  patients.csv:
+    key: [patient_id]
+    required: [patient_id, sex, age, race, randomization_date, treatment_code]
+    target: dm_staging
+  exposure.csv:
+    key: [exposure_id]
+    required: [patient_id, exposure_id, start_date, end_date, dose_mg, dose_unit, route]
+    target: ex_staging
+  adverse_events.csv:
+    key: [event_id]
+    required: [patient_id, event_id, term, soc, start_date, severity, related, serious]
+    target: ae_staging
+  tumor_assessments.csv:
+    key: [assessment_id]
+    required: [patient_id, assessment_id, assessment_date, visit, assessment_code]
+    target: rs_staging
+  disposition.csv:
+    key: [patient_id, status_date]
+    required: [patient_id, status, status_date]
+    target: ds_staging
+
+controlled_values:
+  treatment_code: [A, B]
+  assessment_code: [CR, PR, SD, PD]
+  severity: [1, 2, 3]
+  related: [Y, N]
+  serious: [Y, N]
+
+rules:
+  - Dates are ISO 8601 YYYY-MM-DD in the teaching fixture.
+  - Source fields are not CDISC variables until the adapter writes the staging contract.
+  - Any missing required field, duplicate key or uncontrolled code blocks the run.
+  - Adapter decisions are reviewed; they are not generated and approved automatically by AI.

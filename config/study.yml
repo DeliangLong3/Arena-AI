@@ -1,0 +1,21 @@
+study:
+  id: WS-ONCO-001
+  title: Synthetic solid-tumour workshop study
+  therapeutic_area: oncology
+  data_cutoff: '2026-01-31'
+  live_recist_level: response-focused
+  include_pk: false
+  include_ars: false
+  include_sas_reference: false
+
+live_scope:
+  sdtm: [DM, EX, AE, RS, DS]
+  adam: [ADSL, ADAE, ADRS, ADTTE]
+  tfl: [T_DEMOG, T_TEAE, T_BOR, T_PFS, L_AE, F_PFS_KM]
+
+reproducibility:
+  seed: 20260912
+  source_fixtures_are_synthetic: true
+  ai_runtime_dependency: false
+  require_input_hashes: true
+  require_git_commit: true

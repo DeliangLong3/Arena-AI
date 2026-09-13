@@ -1,0 +1,26 @@
+sources:
+  pharmaverse_examples:
+    repository: https://github.com/pharmaverse/examples
+    revision: 8b8366d9ca38cf846046e362ac988ec0d42181df
+    website: https://pharmaverse.github.io/examples/
+    purpose: official_end_to_end_package_examples
+  sdtm_oak:
+    repository: https://github.com/pharmaverse/sdtm.oak
+    revision: 43194dfb1704d94c5b7fd3a20fe52264efa65df5
+    website: https://pharmaverse.github.io/sdtm.oak/
+    purpose: sdtm_mapping_reference
+  admiral:
+    repository: https://github.com/pharmaverse/admiral
+    revision: 6b5d887aa560c77b3ec983071489725e3046ce1e
+    website: https://pharmaverse.github.io/admiral/
+    purpose: adam_reference
+  admiralonco:
+    repository: https://github.com/pharmaverse/admiralonco
+    revision: be28e0060a427a54c945c0aac2676cd5e407b260
+    website: https://pharmaverse.github.io/admiralonco/
+    purpose: oncology_adam_reference
+
+policy:
+  - Re-resolve revisions during the actual rehearsal and review changes.
+  - Do not install directly from an unreviewed branch in a production-like run.
+  - Package versions belong in renv.lock after the enterprise mirror is selected.

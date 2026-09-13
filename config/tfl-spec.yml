@@ -1,0 +1,33 @@
+spec_version: '1.0'
+approach: direct_adam_to_tfl
+ars_or_ard: false
+
+outputs:
+  - id: T_DEMOG
+    type: table
+    source: ADSL
+    question: Who entered each treatment group and what were baseline characteristics?
+  - id: T_TEAE
+    type: table
+    source: ADAE
+    question: What treatment-emergent adverse events occurred by SOC and PT?
+  - id: T_BOR
+    type: table
+    source: ADRS
+    question: What was best overall response and the response rate?
+  - id: T_PFS
+    type: table
+    source: ADTTE
+    question: What are the PFS event counts and time-to-event summaries?
+  - id: L_AE
+    type: listing
+    source: ADAE
+    question: What are the subject-level treatment-emergent AE records?
+  - id: F_PFS_KM
+    type: figure
+    source: ADTTE
+    question: What is the PFS curve by treatment?
+
+review:
+  required_fields: [output_id, source_dataset, population, treatment, statistic, format, reviewer]
+  note: This is a teaching TFL shell, not a company output specification or ARS/ARD.

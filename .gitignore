@@ -1,0 +1,17 @@
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user
+renv/library/
+renv/staging/
+renv/cache/
+
+reports/*.csv
+reports/*.png
+reports/*.html
+reports/*.pdf
+
+.env
+*.pem
+*.key
+credentials.*

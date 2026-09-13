@@ -1,0 +1,29 @@
+name: workshop-quality
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  project-contracts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate skills
+        run: python3 scripts/validate_skills.py
+      - name: Validate synthetic fixtures
+        run: python3 scripts/validate_fixtures.py
+
+  r-smoke:
+    if: ${{ hashFiles('renv.lock') != '' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: '4.4'
+      - uses: r-lib/actions/setup-renv@v2
+      - name: Run R contract tests
+        run: Rscript -e 'testthat::test_dir("tests/testthat")'
+      - name: Run vendor demo
+        run: Rscript -e 'source("R/run_vendor_demo.R"); run_vendor_demo()'

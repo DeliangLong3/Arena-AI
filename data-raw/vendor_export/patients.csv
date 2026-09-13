@@ -1,0 +1,9 @@
+patient_id,sex,age,race,randomization_date,treatment_code,itt_flag,safety_flag
+101,M,58,ASIAN,2025-01-05,A,Y,Y
+102,F,64,WHITE,2025-01-07,A,Y,Y
+103,M,49,WHITE,2025-01-12,A,Y,Y
+104,F,61,BLACK,2025-01-15,A,Y,Y
+105,M,55,WHITE,2025-01-06,B,Y,Y
+106,F,47,ASIAN,2025-01-09,B,Y,Y
+107,M,68,WHITE,2025-01-14,B,Y,Y
+108,F,59,BLACK,2025-01-18,B,Y,Y

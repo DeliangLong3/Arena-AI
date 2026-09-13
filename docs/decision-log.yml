@@ -1,0 +1,33 @@
+project: pharmaverse-oncology-workshop
+version: 2
+status: workshop-rebuild
+last_reviewed: 2026-09-12
+
+scope:
+  duration: one_day
+  therapeutic_area: oncology
+  input: synthetic_vendor_edc_export
+  objective: internal_training_and_r_migration_method_demo
+  sas_reference_qc: false
+  pk: false
+  ars_ard: false
+  live_recist_scope: rs_focused
+
+teaching_path:
+  primary: official_pharmaverse_examples
+  secondary: repository_vendor_adapter_vertical_slice
+  tfl_approach: direct_adam_to_tfl
+
+quality_policy:
+  claims_about_package_apis: official_documentation_or_pinned_revision_only
+  no_unverified_production_claims: true
+  no_runtime_ai_dependency: true
+  human_approval_for_mapping_and_derivations: true
+  synthetic_data_only_for_ai: true
+
+open_before_rehearsal:
+  - approve_r_version_and_package_mirror
+  - resolve_package_versions_and_generate_renv_lock
+  - pin_official_examples_revision
+  - approve_enterprise_api_retention_and_audit_policy
+  - run_r_pipeline_in_clean_environment
